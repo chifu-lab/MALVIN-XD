@@ -1,7 +1,7 @@
 const fs = require('fs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
-function convertToBool(text, fault = 'true') {
+function convertToBool(text, fault = 'false') {
     return text === fault ? true : false;
 }
 module.exports = {
@@ -53,7 +53,7 @@ AUTO_REACT: process.env.AUTO_REACT || "false",
 ANTI_BAD: process.env.ANTI_BAD || "false",
 // false or true for anti bad words
 
-AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
+AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "false",
 // make true or false status auto seen
 
 AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
@@ -110,7 +110,7 @@ READ_CMD: process.env.READ_CMD || "false",
 DEV: process.env.DEV || "263714757857",
 //replace with your whatsapp number       
  
-ANTI_VV: process.env.ANTI_VV || "true",
+ANTI_VV: process.env.ANTI_VV || "false",
 // true for anti once view 
 
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
